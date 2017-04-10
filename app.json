@@ -126,11 +126,11 @@
   },
   "formation": {
     "web": {
-      "quantity": 2,
+      "quantity": 1,
       "size": "Performance-M"
     },
     "worker": {
-      "quantity": 2,
+      "quantity": 1,
       "size": "Performance-M"
     }
   },
@@ -146,10 +146,6 @@
   "buildpacks": [
     {
       "url": "heroku/nodejs"
-    },
-    {
-      "url": "heroku/ruby"
     }
   ]
 }
-

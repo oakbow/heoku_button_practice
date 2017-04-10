@@ -29,10 +29,6 @@
   },
   "image": "heroku/ruby",
   "addons": [
-    "heroku-redis:premium-0",
-    "heroku-postgresql:standard-0",
-    "memcachier:1000",
-    "papertrail:liatorp",
     "sendgrid:starter"
   ],
   "buildpacks": [

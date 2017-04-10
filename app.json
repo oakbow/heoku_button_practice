@@ -1,145 +1,41 @@
 {
-  "name": "OK SKY",
-  "description": "This is web chat system 'ok-sky'. powered by SOLAIRO, INC.",
+  "name": "Heroku Static Provider",
+  "description": "Static site provider for Heroku.",
   "keywords": [
-    "chat",
-    "ok-sky",
-    "tool",
-    "communication"
+    "static",
+    "site"
   ],
   "website": "http://www.ok-sky.jp",
   "repository": "https://github.com/OKSKY/oksky-chat.git",
   "logo": "https://raw.githubusercontent.com/OKSKY/oksky-chat/master/public/img/oksky-logo-mini.png?token=AI0inHoUYDdC5gF4EYxqJosEEHbwx_vSks5XQpvTwA%3D%3D",
   "success_url": "/",
   "env": {
-    "APP_NAME": {
-      "description":"",
-      "value":""
-    },
-    "CDN_URL": {
-      "description":"",
-      "value":""
-    },
-    "USE_SSL": {
-      "description":"",
-      "value":"1"
-    },
-    "RAILS_MAX_THREADS": {
-      "description": "",
-      "value": "1"
-    },
-    "WEB_CONCURRENCY": {
-      "description": "The number of processes to run.",
-      "value": "5"
-    },
-    "MIN_THREADS": {
-      "description": "",
-      "value": "1"
-    },
-    "APP_SUBDOMAIN": {
-      "description":"",
-      "value":"",
+    "USER": {
+      "description": "(optional) The username of Basic Auth.",
+      "value": "",
       "required": false
     },
-    "MAXSUPPORTCOUNT": {
-      "description":"",
-      "value":"",
+    "PASS": {
+      "description": "(optional) The password of Basic Auth.",
+      "value": "",
       "required": false
-    },
-    "AWS_ACCESS_KEY_ID": {
-      "description":"",
-      "value":"",
-      "required": false
-    },
-    "AWS_SECRET_ACCESS_KEY": {
-      "description":"",
-      "value":"",
-      "required": false
-    },
-    "AWS_S3_BUCKET": {
-      "description":"",
-      "value":"",
-      "required": false
-    },
-    "AWS_S3_REGION": {
-      "description":"",
-      "value":"",
-      "required": false
-    },
-    "GOOGLE_AUTH_KEY": {
-      "description":"",
-      "value":"",
-      "required": false
-    },
-    "GOOGLE_AUTH_SECRET": {
-      "description":"",
-      "value":"",
-      "required": false
-    },
-    "BITLY_ACCESS_TOKEN": {
-      "description":"",
-      "value":"",
-      "required": false
-    },
-    "MAILER_URL": {
-      "description":"",
-      "value":"",
-      "required": false
-    },
-    "ACTION_CABLE_URL": {
-      "description":"",
-      "value":"",
-      "required": false
-    },
-    "DEFAULT_URL_HOST": {
-      "description":"",
-      "value":"",
-      "required": false
-    },
-    "SUPPORT_EMAIL_DOMAIN": {
-      "description":"",
-      "value":"",
-      "required": false
-    },
-    "NLCCFAPI_URL": {
-      "description":"",
-      "value":"http://nlccf.herokuapp.com"
-    },
-    "SECRET_KEY_BASE": {
-      "description": "",
-      "generator": "secret"
-    },
-    "LANG": {
-      "description": "",
-      "value": "en_US.UTF-8"
-    },
-    "RACK_ENV": {
-      "description": "",
-      "value": "production"
-    },
-    "RAILS_ENV": {
-      "description": "",
-      "value": "production"
     }
   },
   "formation": {
     "web": {
       "quantity": 1,
-      "size": "Performance-M"
-    },
-    "worker": {
-      "quantity": 1,
-      "size": "Performance-M"
+      "size": "free"
     }
   },
   "image": "heroku/ruby",
   "addons": [
-    "heroku-redis:premium-7",
-    "heroku-postgresql:standard-0",
-    "memcachier:1000",
-    "papertrail:liatorp",
-    "sendgrid:starter",
-    "bonsai:shared-10"
+    "papertrail:choklad",
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
+    }
   ],
   "buildpacks": [
     {

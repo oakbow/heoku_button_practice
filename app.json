@@ -29,6 +29,7 @@
   },
   "image": "heroku/ruby",
   "addons": [
+    "papertrail:liatorp",
     "sendgrid:starter"
   ],
   "buildpacks": [

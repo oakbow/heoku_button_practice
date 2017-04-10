@@ -11,8 +11,6 @@
   "repository": "https://github.com/OKSKY/oksky-chat.git",
   "logo": "https://raw.githubusercontent.com/OKSKY/oksky-chat/master/public/img/oksky-logo-mini.png?token=AI0inHoUYDdC5gF4EYxqJosEEHbwx_vSks5XQpvTwA%3D%3D",
   "success_url": "/",
-  "scripts": {
-  },
   "env": {
     "APP_NAME": {
       "description":"",

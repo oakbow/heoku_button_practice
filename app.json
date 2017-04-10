@@ -29,6 +29,7 @@
   },
   "image": "heroku/ruby",
   "addons": [
+    "memcachier:1000",
     "papertrail:liatorp",
     "sendgrid:starter"
   ],

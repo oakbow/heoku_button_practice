@@ -9,6 +9,9 @@
   },
   "addons": [
     {
+      "plan": "heroku-postgresql:standard-0"
+    },
+    {
       "plan": "heroku-redis:premium-0"
     }
   ],

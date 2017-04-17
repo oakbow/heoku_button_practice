@@ -1,36 +1,16 @@
 {
-  "name": "Heroku Static Provider",
-  "description": "Static site provider for Heroku.",
-  "keywords": [
-    "static",
-    "site"
-  ],
-  "website": "http://www.ok-sky.jp",
-  "repository": "https://github.com/OKSKY/oksky-chat-setup_heroku",
-  "logo": "https://raw.githubusercontent.com/OKSKY/oksky-chat/master/public/img/oksky-logo-mini.png?token=AI0inHoUYDdC5gF4EYxqJosEEHbwx_vSks5XQpvTwA%3D%3D",
+  "name": "Running",
+  "repository": "https://github.com/mttrs/running",
   "success_url": "/",
-  "env": {
-    "USER": {
-      "description": "(optional) The username of Basic Auth.",
-      "value": "",
-      "required": false
-    },
-    "PASS": {
-      "description": "(optional) The password of Basic Auth.",
-      "value": "",
-      "required": false
-    }
-  },
   "formation": {
     "web": {
       "quantity": 1,
-      "size": "Performance-M"
+      "size": "standard-1x"
     }
   },
-  "image": "heroku/ruby",
   "addons": [
-    "heroku-redis:premium-0",
     "heroku-postgresql:standard-0",
+    "heroku-redis:premium-0",
     "memcachier:1000",
     "sendgrid:starter"
   ],

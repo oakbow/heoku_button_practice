@@ -1,7 +1,6 @@
 {
   "name": "Running",
-  "repository": "https://github.com/OKSKY/oksky-chat-setup_heroku/",
-  "success_url": "/",
+  "repository": "https://github.com/mttrs/running",
   "formation": {
     "web": {
       "quantity": 1,
@@ -9,10 +8,12 @@
     }
   },
   "addons": [
-    "heroku-postgresql:standard-0",
-    "heroku-redis:premium-0",
-    "memcachier:1000",
-    "sendgrid:starter"
+    {
+      "plan": "heroku-postgresql"
+    },
+    {
+      "plan": "heroku-redis:premium-0"
+    }
   ],
   "buildpacks": [
     {

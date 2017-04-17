@@ -1,6 +1,7 @@
 {
   "name": "Running",
   "repository": "https://github.com/mttrs/running",
+  "success_url": "/",
   "formation": {
     "web": {
       "quantity": 1,
@@ -8,12 +9,10 @@
     }
   },
   "addons": [
-    {
-      "plan": "heroku-postgresql:standard-0"
-    },
-    {
-      "plan": "heroku-redis:premium-0"
-    }
+    "heroku-postgresql:standard-0",
+    "heroku-redis:premium-0",
+    "memcachier:1000",
+    "sendgrid:starter"
   ],
   "buildpacks": [
     {

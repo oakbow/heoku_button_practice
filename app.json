@@ -9,7 +9,7 @@
     }
   },
   "addons": [
-    "heroku-postgresql:standard-0",
+    "heroku-postgresql",
     "heroku-redis:premium-0",
     "memcachier:1000",
     "sendgrid:starter"
